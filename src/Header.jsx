@@ -1,14 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Home from "./homepage";
-import About from "./about";
-import Portfolio from "./portfolio";     
-import Services from "./services";
-import Contact from "./contact";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Header>
+    <header className="header"> 
       <nav>
         <ul>
           <li className="home">
@@ -28,7 +23,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-    </Header>
+    </header>
   );
 };
 
