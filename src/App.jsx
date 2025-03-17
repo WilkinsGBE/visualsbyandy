@@ -6,6 +6,7 @@ import About from "./(tabs)/about";
 import Portfolio from "./(tabs)/portfolio";
 import Services from "./(tabs)/services";
 import Contact from "./(tabs)/contact";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </div>

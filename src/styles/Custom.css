@@ -1,0 +1,28 @@
+nav ul li {
+    position: relative; 
+}
+
+nav ul li a {
+    position: relative; 
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #A0522D;
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%); 
+    transition: width 0.5s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; 
+}
