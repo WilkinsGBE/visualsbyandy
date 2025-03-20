@@ -57,14 +57,20 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-black to-[#A0522D] p-6">
       <div className="flex flex-col md:flex-row justify-around items-center p-6 w-full">
-        {/* Left Section - Heading and Text */}
-        <div className="mt-15 md:w-1/2 text-center md:text-left md:mt-0">
-          <h1 className="text-3xl font-bold text-white">
-            Hosting an Event Soon?
+        {/* Left Section - Limited Width for Better Balance */}
+        <div className="mt-15 md:w-1/2 max-w-lg text-center md:text-left md:mt-0 md:pr-10">
+          <h1 className="text-4xl font-extrabold text-white leading-tight">
+            Hosting an Event? Let’s Make It Unforgettable.
           </h1>
-          <p className="text-gray-300 mt-2">
-            Tell us about your upcoming event using the contact form, and our
-            team will reach out to you shortly!
+          <p className="text-gray-300 mt-3 text-lg">
+            Whether it’s a wedding, praise night, or a private shoot, let’s
+            create memories together. Fill out the contact form, and I will get
+            back to you soon.
+          </p>
+
+          {/* ✨ Sell Hook Statement */}
+          <p className="mt-4 text-[#A0522D] text-lg italic font-semibold tracking-wide animate-pulse">
+            💡 Dedicated to giving you my very best, every time.
           </p>
         </div>
 

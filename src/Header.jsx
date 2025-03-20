@@ -15,11 +15,11 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link to="/homepage" className="text-white text-lg hover:text-[#A0522D] transition duration-300">Home</Link>
-          <Link to="/about" className="text-white text-lg hover:text-[#A0522D] transition duration-300">About</Link>
-          <Link to="/portfolio" className="text-white text-lg hover:text-[#A0522D] transition duration-300">Portfolio</Link>
-          <Link to="/services" className="text-white text-lg hover:text-[#A0522D] transition duration-300">Services</Link>
-          <Link to="/contact" className="text-white text-lg hover:text-[#A0522D] transition duration-300">Contact</Link>
+          <Link to="/homepage" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Home</Link>
+          <Link to="/about" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">About</Link>
+          <Link to="/portfolio" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Portfolio</Link>
+          <Link to="/services" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Services</Link>
+          <Link to="/contact" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Contact</Link>
         </nav>
 
         {/* Mobile Menu Button (📸 Icon) */}
