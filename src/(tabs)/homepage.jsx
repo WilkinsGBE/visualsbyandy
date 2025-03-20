@@ -3,7 +3,7 @@ import Slideshow from "../../components/SlideShow";
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen w-full bg-black flex flex-col items-center justify-center text-center px-6">
+    <div className="relative min-h-screen w-full bg-gradient-to-br from-black via-black to-[#A0522D] flex flex-col items-center justify-center text-center px-6">
       
       {/* Background Glow Effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_0%,rgba(0,0,0,1)_80%)] opacity-50 pointer-events-none"></div>
