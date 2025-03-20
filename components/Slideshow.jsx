@@ -55,7 +55,7 @@ const Slideshow = () => {
             initial={{ opacity: 0, y: 50, rotate: 75 }}
             animate={{ opacity: 1, y: 0, rotate: 0 }}
             exit={{ opacity: 0, y: -50, rotate: 110 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className="absolute inset-0 w-full h-full rounded-xl shadow-xl"
           >
             {/* ✅ WebP loads first, but falls back to JPG if not supported */}
