@@ -6,10 +6,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full bg-black bg-opacity-80 backdrop-blur-md shadow-md z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        
         {/* Logo with Glow Effect */}
         <h1 className="text-[#A0522D] text-2xl font-bold tracking-wide drop-shadow-[0_0_10px_rgba(160,82,45,0.8)]">
-          VisualsByAndy
+        📸 VisualsByAndy
         </h1>
 
         {/* Navigation */}

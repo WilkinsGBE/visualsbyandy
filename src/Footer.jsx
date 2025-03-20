@@ -5,31 +5,42 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="flex flex-row justify-between items-center bg-black bg-opacity-80 text-white text-sm py-6 px-8">
-        <div>
-          <p>Copyright. All rights reserved.</p>
-        </div>
-        <div>
-          <h3 className="text-4 font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-            VisualsByAndy
-          </h3>
-        </div>
-        <div>
-          <p>
-            Made by <span>Wilkins</span>
-          </p>
-        </div>
+    <footer className="bg-black bg-opacity-80 text-white py-10 px-10 flex flex-col items-center">
+      {/* Brand Name with Glow */}
+      <h3 className="text-4xl font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-center">
+        VisualsByAndy
+      </h3>
+
+      {/* Copyright & Creator Info */}
+      <div className="text-center mt-4 space-y-2">
+        <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
+        <p>
+          Made by <span className="text-[#A0522D] font-semibold">Wilkins</span>
+        </p>
+        <a
+          href="mailto:wilkins4business@gmail.com"
+          className="text-2xl hover:text-[#A0522D] transition cursor-pointer"
+        >
+        </a>
       </div>
-      <div>
-        <FontAwesomeIcon
-          icon={faInstagram}
-          className="text-2xl hover:text-[#A0522D] transition"
-        />
-        <FontAwesomeIcon
-          icon={faEnvelope}
-          className="text-2xl hover:text-[#A0522D] transition"
-        />
+
+      {/* Social Icons Section */}
+      <div className="mt-6 flex space-x-6">
+        <a
+          href="https://www.instagram.com/visualsbyandy_"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-2xl hover:text-[#A0522D] transition cursor-pointer"
+        >
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>
+
+        <a
+          href="mailto:andylorgis@gmail.com"
+          className="text-2xl hover:text-[#A0522D] transition cursor-pointer"
+        >
+          <FontAwesomeIcon icon={faEnvelope} />
+        </a>
       </div>
     </footer>
   );
