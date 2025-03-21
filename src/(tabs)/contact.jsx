@@ -57,15 +57,15 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-black to-[#A0522D] p-6">
       <div className="flex flex-col md:flex-row justify-around items-center p-6 w-full">
-        {/* Left Section - Limited Width for Better Balance */}
-        <div className="mt-15 md:w-1/2 max-w-lg text-center md:text-left md:mt-0 md:pr-10">
+        {/* Left Section - Fixed Margin & Padding */}
+        <div className="mt-16 md:mt-20 lg:pt-16 md:w-1/2 max-w-lg text-center md:text-left md:pr-10">
           <h1 className="text-4xl font-extrabold text-white leading-tight">
             Hosting an Event? Let’s Make It Unforgettable.
           </h1>
           <p className="text-gray-300 mt-3 text-lg">
             Whether it’s a wedding, praise night, or a private shoot, let’s
             create memories together. Fill out the contact form, and I will get
-            back to you soon.
+            back to you shortly.
           </p>
 
           {/* ✨ Sell Hook Statement */}
@@ -75,7 +75,7 @@ const Contact = () => {
         </div>
 
         {/* Right Section - Contact Form */}
-        <form onSubmit={handleSubmit} className="md:w-1/2 mt-6 md:mt-0 w-full">
+        <form onSubmit={handleSubmit} className="md:w-1/2 mt-6 md:mt-16 w-full">
           <div className="flex flex-col space-y-4">
             {/* First & Last Name */}
             <div className="flex flex-col md:flex-row md:space-x-4">
@@ -143,7 +143,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border border-gray-600 rounded-md bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#A0522D]"
+                className="w-full p-3 border border-gray-600 rounded-md bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#A0522D] resize-none"
               ></textarea>
             </div>
 
