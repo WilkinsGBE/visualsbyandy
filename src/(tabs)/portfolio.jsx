@@ -32,42 +32,36 @@ const portfolioItems = [
 
 const Portfolio = () => {
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-br from-black via-black to-[#A0522D] flex flex-col items-center justify-center text-center px-6 py-4">
-      {/* Collection 1 - New Year New Blessings*/}
-      <div>
-        <h1 className="text-4xl text-center text-white mb-10 font-bold">
-          My Portfolio
-        </h1>
-        <p className="text-m font-bold text-[#A0522D] mb-6">
-          <Typewriter
-            words={[
-              "“When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.”",
-            ]}
-            loop={1}
-            cursor
-            cursorStyle="|"
-            typeSpeed={30}
-          />
+    <div className="min-h-screen w-full bg-gradient-to-br from-black via-black to-[#A0522D] px-6 py-12 flex flex-col justify-start items-center text-center">
+      <section className="pt-16 pb-10 text-center">
+        <h1 className="text-4xl text-white font-bold mb-5">My Portfolio</h1>
+
+        <p className="text-m font-bold text-[#A0522D] mb-6 text-center max-w-2xl mx-auto">
+  <Typewriter
+    words={[
+      "“When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.”",
+    ]}
+    loop={1}
+    cursor
+    cursorStyle="|"
+    typeSpeed={30}
+  />
+</p>
+
+
+        <p className="text-m font-bold text-[#A0522D] mb-4">
+          - Ansel Adams
         </p>
-        <p className="text-m font-bold text-[#A0522D] mb-6">
-          <Typewriter
-            words={["- Ansel Adams"]}
-            loop={1}
-            cursor
-            cursorStyle="|"
-            typeSpeed={30}
-          />
-        </p>
-      </div>
+      </section>
+
       {/* Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {portfolioItems.map((item, index) => (
+        {portfolioItems.map((item) => (
           <PortfolioCard
-            key={index}
+            key={item.id}
             imageSrc={item.imageSrc}
             eventName={item.eventName}
             eventDate={item.eventDate}
-            className="w-full h-60 object-cover"
           />
         ))}
       </div>
