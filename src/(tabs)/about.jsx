@@ -14,7 +14,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="../images/Gala/gala3.JPG" // Replace with actual image path
+            src="../images/Gala/gala3.JPG"
             alt="Photographer"
             className="w-full max-w-[320px] h-auto object-cover rounded-2xl shadow-lg border-4 border-[#A0522D]"
           />
