@@ -10,7 +10,7 @@ const PortfolioCard = ({ imageSrc, eventName, eventDate, collectionId }) => {
       <img
         src={imageSrc}
         alt={eventName}
-        className="w-full h-100 object-cover"
+        className="w-full h-90 object-cover"
       />
       <div className="p-4 text-center">
         <h3 className="text-lg font-semibold text-[#A0522D]">{eventName}</h3>

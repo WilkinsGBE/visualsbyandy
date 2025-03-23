@@ -4,34 +4,34 @@ import PortfolioCard from "../../components/PortfolioCard";
 
 const portfolioItems = [
   {
-    imageSrc: "../images/Gala/gala8.JPG",
+    imageSrc: "../collections/Gala/gala8.jpg",
     eventName: "New Year, New Blessings",
     eventDate: "December 29 2024",
-    collectionId: "Gala"
+    collectionId: "Gala",
   },
   {
-    imageSrc: "../images/NewBeginnings/beginnings2.JPG",
+    imageSrc: "../collections/NewBeginnings/beginnings2.jpg",
     eventName: "New Beginnings",
     eventDate: "December 14 2024",
-    collectionId: "NewBeginnings"
+    collectionId: "NewBeginnings",
   },
   {
-    imageSrc: "../images/SabbatJeunesse/chante4.JPG",
+    imageSrc: "../collections/SabbatJeunesse/chante4.jpg",
     eventName: "Praise Worship",
     eventDate: "December 21 2024",
-    collectionId: "YouthSabbath"
+    collectionId: "SabbatJeunesse",
   },
   {
-    imageSrc: "../images/Reconnected/reconnected1.JPG",
+    imageSrc: "../collections/Reconnected/reconnected1.jpg",
     eventName: "Reconnected MTL",
     eventDate: "March 1st 2025",
-    collectionId: "reconnectedmtl"
+    collectionId: "Reconnectedmtl",
   },
   {
-    imageSrc: "../images/RenewalMinistry/renewal6.JPG",
+    imageSrc: "../collections/RenewalMinistry/renewal6.jpg",
     eventName: "Salem Youth Service",
     eventDate: "October 5 2024",
-    collectionId: "renewal"
+    collectionId: "RenewalMinistry",
   },
 ];
 
@@ -42,28 +42,25 @@ const Portfolio = () => {
         <h1 className="text-4xl text-white font-bold mb-5">My Portfolio</h1>
 
         <p className="text-m font-bold text-[#A0522D] mb-6 text-center max-w-2xl mx-auto">
-  <Typewriter
-    words={[
-      "“When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.”",
-    ]}
-    loop={1}
-    cursor
-    cursorStyle="|"
-    typeSpeed={30}
-  />
-</p>
-
-
-        <p className="text-m font-bold text-[#A0522D] mb-4">
-          - Ansel Adams
+          <Typewriter
+            words={[
+              "“When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.”",
+            ]}
+            loop={1}
+            cursor
+            cursorStyle="|"
+            typeSpeed={30}
+          />
         </p>
+
+        <p className="text-m font-bold text-[#A0522D] mb-4">- Ansel Adams</p>
       </section>
 
       {/* Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {portfolioItems.map((item) => (
-          <PortfolioCard 
-            key={item.id}
+          <PortfolioCard
+            key={item.collectionId}
             imageSrc={item.imageSrc}
             eventName={item.eventName}
             eventDate={item.eventDate}

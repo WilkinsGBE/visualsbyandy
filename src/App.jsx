@@ -12,6 +12,7 @@ import Portfolio from "./(tabs)/portfolio";
 import Services from "./(tabs)/services";
 import Contact from "./(tabs)/contact";
 import Footer from "./Footer";
+import CollectionPage from "./(tabs)/CollectionPage";
 
 const App = () => {
   return (
