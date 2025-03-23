@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const collectionsData = {
   Reconnectedmtl: {
@@ -30,6 +32,10 @@ const collectionsData = {
       "/collections/Gala/gala3.jpg",
       "/collections/Gala/gala4.jpg",
       "/collections/Gala/gala5.jpg",
+      "/collections/Gala/gala6.jpg",
+      "/collections/Gala/gala7.jpg",
+      "/collections/Gala/gala8.jpg",
+      "/collections/Gala/gala9.jpg",
     ],
   },
   RenewalMinistry: {
@@ -40,6 +46,9 @@ const collectionsData = {
       "/collections/RenewalMinistry/renewal3.jpg",
       "/collections/RenewalMinistry/renewal4.jpg",
       "/collections/RenewalMinistry/renewal5.jpg",
+      "/collections/RenewalMinistry/renewal6.jpg",
+      "/collections/RenewalMinistry/renewal7.jpg",
+      "/collections/RenewalMinistry/renewal8.jpg",
     ],
   },
   SabbatJeunesse: {
@@ -56,6 +65,8 @@ const collectionsData = {
 const CollectionPage = () => {
   const { collectionId } = useParams();
   const collection = collectionsData[collectionId];
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
   if (!collection) {
     return (
@@ -63,21 +74,60 @@ const CollectionPage = () => {
     );
   }
 
+  const openLightbox = (index) => {
+    setPhotoIndex(index);
+    setIsOpen(true);
+  };
+
   return (
-    <div className="bg-black min-h-screen p-6">
-      <h1 className="text-4xl text-white text-center font-bold mb-10">
+    <div className="bg-black min-h-screen p-6 text-center">
+      <h1 className="text-4xl text-white font-bold mb-10">
         {collection.title}
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      {/* Responsive Grid Layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {collection.images.map((img, index) => (
           <img
             key={index}
             src={img}
-            alt={`${collection.title} ${index}`}
-            className="w-full rounded-xl shadow-md"
+            onClick={() => openLightbox(index)}
+            alt={`image ${index}`}
+            className="w-full h-72 object-cover rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-105"
           />
         ))}
       </div>
+
+      {/* UX indicator */}
+      <p className="text-sm text-white mt-6 opacity-60">
+        Click any photo to view full screen
+      </p>
+
+      {/* Lightbox */}
+      {isOpen && (
+        <Lightbox
+          mainSrc={collection.images[photoIndex]}
+          nextSrc={
+            collection.images[(photoIndex + 1) % collection.images.length]
+          }
+          prevSrc={
+            collection.images[
+              (photoIndex + collection.images.length - 1) %
+                collection.images.length
+            ]
+          }
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex(
+              (photoIndex + collection.images.length - 1) %
+                collection.images.length
+            )
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % collection.images.length)
+          }
+        />
+      )}
     </div>
   );
 };
