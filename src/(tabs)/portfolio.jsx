@@ -7,26 +7,31 @@ const portfolioItems = [
     imageSrc: "../images/Gala/gala8.JPG",
     eventName: "New Year, New Blessings",
     eventDate: "December 29 2024",
+    collectionId: "Gala"
   },
   {
     imageSrc: "../images/NewBeginnings/beginnings2.JPG",
     eventName: "New Beginnings",
     eventDate: "December 14 2024",
+    collectionId: "NewBeginnings"
   },
   {
     imageSrc: "../images/SabbatJeunesse/chante4.JPG",
     eventName: "Praise Worship",
     eventDate: "December 21 2024",
+    collectionId: "YouthSabbath"
   },
   {
     imageSrc: "../images/Reconnected/reconnected1.JPG",
     eventName: "Reconnected MTL",
     eventDate: "March 1st 2025",
+    collectionId: "reconnectedmtl"
   },
   {
     imageSrc: "../images/RenewalMinistry/renewal6.JPG",
     eventName: "Salem Youth Service",
     eventDate: "October 5 2024",
+    collectionId: "renewal"
   },
 ];
 
@@ -57,11 +62,12 @@ const Portfolio = () => {
       {/* Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {portfolioItems.map((item) => (
-          <PortfolioCard
+          <PortfolioCard 
             key={item.id}
             imageSrc={item.imageSrc}
             eventName={item.eventName}
             eventDate={item.eventDate}
+            collectionId={item.collectionId}
           />
         ))}
       </div>
