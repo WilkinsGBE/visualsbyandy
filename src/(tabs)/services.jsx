@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const serviceGroups = [
   {
@@ -68,6 +69,10 @@ const Services = () => {
               </div>
             ))}
           </div>
+          {/* Glowing Button */}
+          <button className="mt-8 px-6 py-3 bg-[#A0522D] hover:bg-[#8B4513] text-white font-semibold text-lg rounded-full transition shadow-[0px_0px_15px_rgba(160,82,45,0.6)] hover:shadow-[0px_0px_25px_rgba(139,69,19,0.8)]">
+            <Link to="/contact">Reserve your shoot !</Link>
+          </button>
         </section>
       ))}
     </div>

@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 const About = () => {
   return (
     <div className="relative min-h-screen w-full bg-gradient-to-br from-black via-black to-[#A0522D] flex items-center justify-center px-12 py-20">
-      <div className="max-w-6xl w-full grid md:grid-cols-10 gap-12 items-center">
+      <div className="max-w-7xl w-full grid md:grid-cols-10 gap-12 items-center">
         {/* Photographer's Image (30%) */}
         <motion.div 
           className="md:col-span-3 flex justify-center"
@@ -14,7 +14,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="../images/Gala/gala3.JPG"
+            src="../andy.jpg"
             alt="Photographer"
             className="w-full max-w-[320px] h-auto object-cover rounded-2xl shadow-lg border-4 border-[#A0522D]"
           />
