@@ -65,7 +65,7 @@ const collectionsData = {
 const CollectionPage = () => {
   const { collectionId } = useParams();
   const collection = collectionsData[collectionId];
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
   if (!collection) {
@@ -74,10 +74,7 @@ const CollectionPage = () => {
     );
   }
 
-  const openLightbox = (index) => {
-    setPhotoIndex(index);
-    setIsOpen(true);
-  };
+  const slides = collection.images.map((img) => ({ src: img }));
 
   return (
     <div className="bg-black min-h-screen p-6 text-center">
@@ -91,9 +88,12 @@ const CollectionPage = () => {
           <img
             key={index}
             src={img}
-            onClick={() => openLightbox(index)}
+            onClick={() => {
+              setPhotoIndex(index);
+              setOpen(true);
+            }}
             alt={`image ${index}`}
-            className="w-full h-72 object-cover rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-105"
+            className="w-full object-contain rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-105"
           />
         ))}
       </div>
@@ -104,28 +104,13 @@ const CollectionPage = () => {
       </p>
 
       {/* Lightbox */}
-      {isOpen && (
+      {open && (
         <Lightbox
-          mainSrc={collection.images[photoIndex]}
-          nextSrc={
-            collection.images[(photoIndex + 1) % collection.images.length]
-          }
-          prevSrc={
-            collection.images[
-              (photoIndex + collection.images.length - 1) %
-                collection.images.length
-            ]
-          }
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex(
-              (photoIndex + collection.images.length - 1) %
-                collection.images.length
-            )
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % collection.images.length)
-          }
+          open={open}
+          close={() => setOpen(false)}
+          slides={slides}
+          index={photoIndex}
+          on={{ view: ({ index }) => setPhotoIndex(index) }}
         />
       )}
     </div>
