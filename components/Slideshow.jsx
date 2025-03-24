@@ -28,7 +28,7 @@ const Slideshow = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center h-[500px] w-[350px] mx-auto">
-      <div className="relative w-full h-[400px]">
+      <div className="relative w-full h-[400px] overflow-hidden">
         {images.map((src, index) => (
           <AnimatePresence key={index}>
             {index === currentIndex && (
