@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const base = import.meta.env.BASE_URL;
+
 const images = [
-  "../collections/NewBeginnings/beginnings1.jpg",
-  "../collections/SabbatJeunesse/chante1.jpg",
-  "../collections/Reconnected/reconnected3.jpg",
-  "../collections/Gala/gala7.jpg",
-  "../collections/RenewalMinistry/renewal3.jpg",
-  "../collections/Gala/gala1.jpg",
-  "../collections/RenewalMinistry/renewal4.jpg",
-  "../collections/SabbatJeunesse/chante2.jpg",
-  "../collections/Reconnected/reconnected4.jpg",
-  "../collections/NewBeginnings/beginnings5.jpg",
-  "../collections/Gala/gala4.jpg",
+  `${base}collections/NewBeginnings/beginnings1.jpg`,
+  `${base}collections/SabbatJeunesse/chante1.jpg`,
+  `${base}collections/Reconnected/reconnected3.jpg`,
+  `${base}collections/Gala/gala7.jpg`,
+  `${base}collections/RenewalMinistry/renewal3.jpg`,
+  `${base}collections/Gala/gala1.jpg`,
+  `${base}collections/RenewalMinistry/renewal4.jpg`,
+  `${base}collections/SabbatJeunesse/chante2.jpg`,
+  `${base}collections/Reconnected/reconnected4.jpg`,
+  `${base}collections/NewBeginnings/beginnings5.jpg`,
+  `${base}collections/Gala/gala4.jpg`,
 ];
 
 const Slideshow = () => {

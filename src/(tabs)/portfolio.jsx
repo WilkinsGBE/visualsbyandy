@@ -2,33 +2,35 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import PortfolioCard from "../../components/PortfolioCard";
 
+const base = import.meta.env.BASE_URL;
+
 const portfolioItems = [
   {
-    imageSrc: "../collections/Gala/gala8.jpg",
+    imageSrc: `${base}collections/Gala/gala8.jpg`,
     eventName: "New Year, New Blessings",
     eventDate: "December 29 2024",
     collectionId: "Gala",
   },
   {
-    imageSrc: "../collections/NewBeginnings/beginnings2.jpg",
+    imageSrc: `${base}collections/NewBeginnings/beginnings2.jpg`,
     eventName: "New Beginnings",
     eventDate: "December 14 2024",
     collectionId: "NewBeginnings",
   },
   {
-    imageSrc: "../collections/SabbatJeunesse/chante4.jpg",
+    imageSrc: `${base}collections/SabbatJeunesse/chante4.jpg`,
     eventName: "Praise Worship",
     eventDate: "December 21 2024",
     collectionId: "SabbatJeunesse",
   },
   {
-    imageSrc: "../collections/Reconnected/reconnected1.jpg",
+    imageSrc: `${base}collections/Reconnected/reconnected1.jpg`,
     eventName: "Reconnected MTL",
     eventDate: "March 1st 2025",
     collectionId: "Reconnectedmtl",
   },
   {
-    imageSrc: "../collections/RenewalMinistry/renewal6.jpg",
+    imageSrc: `${base}collections/RenewalMinistry/renewal6.jpg`,
     eventName: "Salem Youth Service",
     eventDate: "October 5 2024",
     collectionId: "RenewalMinistry",
