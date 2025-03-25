@@ -101,35 +101,35 @@ const Header = () => {
             className="mobile-link"
             onClick={() => setMenuOpen(false)}
           >
-            {t("home")}
+            {t("header.home")}
           </Link>
           <Link
             to="/about"
             className="mobile-link"
             onClick={() => setMenuOpen(false)}
           >
-            {t("about")}
+            {t("header.about")}
           </Link>
           <Link
             to="/portfolio"
             className="mobile-link"
             onClick={() => setMenuOpen(false)}
           >
-            {t("portfolio")}
+            {t("header.portfolio")}
           </Link>
           <Link
             to="/services"
             className="mobile-link"
             onClick={() => setMenuOpen(false)}
           >
-            {t("services")}
+            {t("header.services")}
           </Link>
           <Link
             to="/contact"
             className="mobile-link"
             onClick={() => setMenuOpen(false)}
           >
-            {t("contact")}
+            {t("header.contact")}
           </Link>
 
           {/* Language Switcher (Mobile) */}
