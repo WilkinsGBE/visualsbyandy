@@ -6,23 +6,14 @@ const serviceGroups = [
     title: "VisualsByAndy Photography Packages",
     services: [
       {
-        name: "Full Event (no editing)",
+        name: "Full Event",
         price: "250$",
-        features: [
-          "3 hours coverage",
-          "professional photographer",
-          "100 photos",
-        ],
+        features: ["3 hours coverage", "100 photos edited"],
       },
       {
-        name: "Full Event (editing)",
+        name: "Full Event + Behind the scene",
         price: "$350",
-        features: [
-          "6 hours coverage",
-          "professional photographers",
-          "More than 100 edited photos",
-          "Online gallery",
-        ],
+        features: ["Full coverage", "More than 100 edited photos"],
       },
       {
         name: "Studio Photoshoot",
@@ -30,7 +21,7 @@ const serviceGroups = [
         features: [
           "1 hours",
           "Additional hours are 75$ each",
-          "200+ edited photos",
+          "All photos are edited",
           "Premium photo album",
         ],
       },
@@ -75,6 +66,94 @@ const Services = () => {
           </button>
         </section>
       ))}
+
+      {/* Policies section */}
+      <div className="flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-4xl mx-auto">
+        <h3 className="text-3xl md:text-4xl font-bold text-brown-500 mb-12 text-center">
+          Service Policies
+        </h3>
+
+        {/* Booking Policy */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-brown-500 mb-4">
+            Booking & Deposits
+          </h2>
+          <ol className="list-decimal pl-6 text-gray-300 space-y-2">
+            <li className="mb-2">
+              A non-refundable deposit of 50$ is required to secure your
+              booking. The remaining balance is due on the day of the shoot.
+            </li>
+            <li>Dates are not guaranteed until the deposit is received.</li>
+          </ol>
+        </section>
+
+        {/* Cancellation Policy */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-brown-500 mb-4">
+            Cancellation & Rescheduling
+          </h2>
+          <ol className="list-decimal pl-6 text-gray-300 space-y-2">
+            <li className="mb-2">
+              Cancellations must be made at least 72 hours before the scheduled
+              shoot to qualify for a reschedule.
+            </li>
+            <li className="mb-2">
+              Deposits are non-refundable, but may be transferred once to a new
+              date.
+            </li>
+            <li>
+              If you are behind the appointment time by 15 minutes or more you
+              photoshoot get canceled.
+            </li>
+          </ol>
+        </section>
+
+        {/* Turnaround Time */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-brown-500 mb-4">
+            Photo Delivery
+          </h2>
+          <ol className=" pl-6 text-gray-300 ">
+            <li>
+              Edited photos are delivered within 7–14 business days via a
+              private online gallery. Rush delivery is available upon request
+              for an additional fee.
+            </li>
+          </ol>
+        </section>
+
+        {/* Usage Rights */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-brown-500 mb-4">
+            Usage Rights
+          </h2>
+          <ol className="pl-6 text-gray-300 ">
+            <li>
+              VisualsByAndy reserves the right to use photos for portfolio,
+              website, and promotional use unless otherwise requested in writing
+              by the client.
+            </li>
+          </ol>
+        </section>
+
+        {/* Client Responsibilities */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold text-brown-500 mb-4">
+            Client Responsibilities
+          </h2>
+          <ol className=" pl-6 text-gray-300">
+            <li>
+              Clients are expected to arrive on time and be prepared for the
+              shoot. Extra charges may apply for delays or location changes not
+              discussed in advance.
+            </li>
+          </ol>
+        </section>
+
+        <p className="text-sm text-gray-500 mt-10 text-center">
+          Last updated: March 2025
+        </p>
+      </div>
     </div>
   );
 };
