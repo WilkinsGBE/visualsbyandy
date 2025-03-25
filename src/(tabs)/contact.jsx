@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -13,15 +16,14 @@ const Contact = () => {
   const [isSent, setIsSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // Handle input change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setLoading(true);
     emailjs
       .send(
         "service_49fc0bc",
@@ -36,8 +38,7 @@ const Contact = () => {
         "bi_UHoK-E4BAGzpRc"
       )
       .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
+        () => {
           setIsSent(true);
           setFormData({
             firstName: "",
@@ -57,20 +58,16 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-black to-[#A0522D] p-6">
       <div className="flex flex-col md:flex-row justify-around items-center p-6 w-full">
-        {/* Left Section - Fixed Margin & Padding */}
+        {/* Left Section */}
         <div className="mt-16 md:mt-20 lg:pt-16 md:w-1/2 max-w-lg text-center md:text-left md:pr-10">
           <h1 className="text-4xl font-extrabold text-white leading-tight">
-            Hosting an Event? Let’s Make It Unforgettable.
+            {t("contact.title")}
           </h1>
           <p className="text-gray-300 mt-3 text-lg">
-            Whether it’s a wedding, praise night, or a private shoot, let’s
-            create memories together. Fill out the contact form, and I will get
-            back to you shortly.
+            {t("contact.description")}
           </p>
-
-          {/* ✨ Sell Hook Statement */}
           <p className="mt-4 text-[#A0522D] text-lg italic font-semibold tracking-wide animate-pulse">
-            💡 Dedicated to giving you my very best, every time.
+            💡 {t("contact.hook")}
           </p>
         </div>
 
@@ -80,11 +77,13 @@ const Contact = () => {
             {/* First & Last Name */}
             <div className="flex flex-col md:flex-row md:space-x-4">
               <div className="w-full">
-                <label className="text-sm text-gray-400">First Name</label>
+                <label className="text-sm text-gray-400">
+                  {t("contact.firstNameLabel")}
+                </label>
                 <input
                   type="text"
                   name="firstName"
-                  placeholder="Enter your first name"
+                  placeholder={t("contact.firstNamePlaceholder")}
                   value={formData.firstName}
                   onChange={handleChange}
                   required
@@ -92,11 +91,13 @@ const Contact = () => {
                 />
               </div>
               <div className="w-full mt-4 md:mt-0">
-                <label className="text-sm text-gray-400">Last Name</label>
+                <label className="text-sm text-gray-400">
+                  {t("contact.lastNameLabel")}
+                </label>
                 <input
                   type="text"
                   name="lastName"
-                  placeholder="Enter your last name"
+                  placeholder={t("contact.lastNamePlaceholder")}
                   value={formData.lastName}
                   onChange={handleChange}
                   required
@@ -107,11 +108,13 @@ const Contact = () => {
 
             {/* Email */}
             <div>
-              <label className="text-sm text-gray-400">Email</label>
+              <label className="text-sm text-gray-400">
+                {t("contact.emailLabel")}
+              </label>
               <input
                 type="email"
                 name="email"
-                placeholder="Enter your email"
+                placeholder={t("contact.emailPlaceholder")}
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -121,11 +124,13 @@ const Contact = () => {
 
             {/* Subject */}
             <div>
-              <label className="text-sm text-gray-400">Subject</label>
+              <label className="text-sm text-gray-400">
+                {t("contact.subjectLabel")}
+              </label>
               <input
                 type="text"
                 name="subject"
-                placeholder="Wedding coming soon!"
+                placeholder={t("contact.subjectPlaceholder")}
                 value={formData.subject}
                 onChange={handleChange}
                 required
@@ -135,11 +140,13 @@ const Contact = () => {
 
             {/* Message */}
             <div>
-              <label className="text-sm text-gray-400">Message</label>
+              <label className="text-sm text-gray-400">
+                {t("contact.messageLabel")}
+              </label>
               <textarea
                 name="message"
                 rows="4"
-                placeholder="Hi Andy, I would like to book you for my event..."
+                placeholder={t("contact.messagePlaceholder")}
                 value={formData.message}
                 onChange={handleChange}
                 required
@@ -153,13 +160,13 @@ const Contact = () => {
               className="bg-[#A0522D] text-white py-3 rounded-md hover:bg-[#8B4513] transition"
               disabled={loading}
             >
-              {loading ? "Sending..." : "Submit"}
+              {loading ? t("contact.sending") : t("contact.submit")}
             </button>
 
             {/* Success Message */}
             {isSent && (
               <p className="text-green-500 text-center mt-2">
-                ✅ Your message has been sent successfully!
+                {t("contact.successMessage")}
               </p>
             )}
           </div>

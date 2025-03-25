@@ -1,0 +1,130 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact"
+  },
+
+  "footer": {
+    "copyright": "Tous droits réservés.",
+    "madeBy": "Réalisé par"
+  },
+
+  "homepage": {
+    "title": "Capturer les meilleurs moments de votre vie.",
+    "subtitle": "Des photos professionelles qui durent toute votre vie.",
+    "cta": "Voir le portfolio"
+  },
+  "about": {
+    "meetAndy": "Rencontrez Andy !",
+    "bio1": "Andy est un jeune photographe dont le parcours vers la foi et le but dans son art a commencé grâce à l'expérience puissante des concerts chrétiens. Ayant grandi sans éducation chrétienne, Andy a découvert la foi plus tard dans sa vie, attiré par l'énergie de la louange et le sentiment de communauté que cela créait. Dans sa quête de moyens pour honorer Dieu, il a découvert que la photographie était sa vocation. Il a commencé à capturer des moments lors de concerts chrétiens et d'autres événements de culte, réalisant qu'à travers son objectif, il pouvait honorer Dieu en partageant la beauté et l’émotion de ces moments sacrés.",
+    "bio2": "La photographie d’Andy se concentre sur les moments bruts et authentiques de la louange—que ce soit l’intensité d’un leader de louange, la joie de la congrégation ou les instants calmes de réflexion. Son travail vise à montrer comment la musique et la louange peuvent rapprocher les gens de Dieu et créer un profond sentiment de connexion les uns avec les autres.",
+    "bio3": "Depuis qu’il a embrassé la foi et découvert son but à travers la photographie, Andy a eu l’opportunité de travailler avec des églises, des événements chrétiens et des ministères de musique, utilisant son art pour documenter la puissance de la louange. Ses images rappellent comment la louange invite la présence de Dieu dans nos vies, créant des moments de transformation et de communauté.",
+    "bio4": "À travers sa photographie, Andy espère inspirer les autres à voir et ressentir la présence de Dieu dans leurs propres expériences de louange. Avec un cœur dédié à honorer Dieu par son talent, Andy continue de capturer la beauté des concerts chrétiens et l’impact profond de la louange."
+  },
+  "portfolio": {
+    "title": "Mon Portfolio",
+    "quote": "« Lorsque les mots deviennent flous, je me concentre avec des photos. Lorsque les images deviennent inadéquates, je me contente du silence. »",
+    "reconnected": "Reconnected MTL",
+    "reconnectedDate": "1er mars 2025",
+    "nyblessings": "New Year, New Blessings",
+    "nyblessingsDate": "29 décembre 2024",
+    "praiseworship": "Culte Chanté",
+    "praiseworshipDate": "21 décembre 2024",
+    "newbeginnings": "New Beginnings",
+    "newbeginningsDate": "14 décembre 2024",
+    "salemyouth": "Culte de la jeunesse - Renewal Ministry",
+    "salemyouthDate": "5 octobre 2024"
+  },
+  "services": {
+    "packageTitle": "Forfaits de photographie VisualsByAndy",
+    "bookBtn": "Réservez votre séance !",
+    "fullEvent": {
+      "name": "Événement complet",
+      "price": "250$",
+      "features": ["3 heures de couverture", "100 photos retouchées"]
+    },
+    "fullEventBTS": {
+      "name": "Événement complet + Coulisses",
+      "price": "350$",
+      "features": ["Couverture complète", "Plus de 100 photos retouchées"]
+    },
+    "studio": {
+      "name": "Séance photo en studio",
+      "price": "200$",
+      "features": [
+        "1 heure",
+        "Heures supplémentaires à 75$ chacune",
+        "Toutes les photos sont retouchées",
+        "Album photo premium"
+      ]
+    },
+    "policies": {
+      "title": "Politiques de service",
+      "booking": {
+        "title": "Réservations & Dépôts",
+        "items": [
+          "Un dépôt non remboursable de 50$ est requis pour garantir votre réservation. Le solde restant est dû le jour de la séance.",
+          "Les dates ne sont pas garanties tant que le dépôt n'est pas reçu."
+        ]
+      },
+      "cancel": {
+        "title": "Annulation & Reprogrammation",
+        "items": [
+          "Les annulations doivent être faites au moins 72 heures avant la séance pour pouvoir reprogrammer.",
+          "Les dépôts ne sont pas remboursables, mais peuvent être transférés une seule fois à une nouvelle date.",
+          "Si vous avez plus de 15 minutes de retard, votre séance photo sera annulée."
+        ]
+      },
+      "delivery": {
+        "title": "Livraison des photos",
+        "items": [
+          "Les photos retouchées sont livrées sous 7 à 14 jours ouvrables via une galerie privée en ligne. Une livraison express est disponible sur demande moyennant des frais supplémentaires."
+        ]
+      },
+      "rights": {
+        "title": "Droits d’utilisation",
+        "items": [
+          "VisualsByAndy se réserve le droit d’utiliser les photos pour son portfolio, son site web et des promotions, sauf demande écrite contraire du client."
+        ]
+      },
+      "responsibilities": {
+        "title": "Responsabilités du client",
+        "items": [
+          "Les clients doivent arriver à l’heure et être prêts pour la séance. Des frais supplémentaires peuvent s’appliquer pour tout retard ou changement de lieu non discuté à l’avance."
+        ]
+      }
+    },
+    "lastUpdated": "Dernière mise à jour : {{date}}"
+  },
+  "contact": {
+    "title": "Vous organisez un événement ? Rendons-le inoubliable.",
+    "description": "Que ce soit un mariage, une soirée de louange ou une séance privée, créons ensemble des souvenirs. Remplissez le formulaire de contact et je vous répondrai rapidement.",
+    "hook": "Dévoué à vous offrir le meilleur, à chaque fois.",
+    "firstNameLabel": "Prénom",
+    "firstNamePlaceholder": "Entrez votre prénom",
+    "lastNameLabel": "Nom de famille",
+    "lastNamePlaceholder": "Entrez votre nom de famille",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "Mariage à venir !",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Salut Andy, j’aimerais te réserver pour mon événement...",
+    "submit": "Envoyer",
+    "sending": "Envoi en cours...",
+    "successMessage": "✅ Votre message a été envoyé avec succès !"
+  },
+  "collections": {
+    "reconnected": "Reconnected MTL",
+    "newBeginnings": "New Beginnings",
+    "nyblessings": "New Year, New Blessings",
+    "renewal": "Culte jeunesse - Renewal Ministry",
+    "sabbat": "Culte chanté - LaFontaine & Saint-Léonard",
+    "notFound": "Collection introuvable",
+    "clickToView": "Cliquez sur une photo pour l’afficher en plein écran",
+    "back": "Retour au portfolio"
+  }
+}

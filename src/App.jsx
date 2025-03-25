@@ -5,6 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
+import './i18n';
 import Header from "./Header";
 import HomePage from "./(tabs)/homepage";
 import About from "./(tabs)/about";
