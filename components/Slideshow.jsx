@@ -23,7 +23,7 @@ const Slideshow = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -31,25 +31,23 @@ const Slideshow = () => {
   return (
     <div className="relative flex flex-col items-center justify-center h-[500px] w-[350px] mx-auto">
       <div className="relative w-full h-[400px] overflow-hidden">
-        {images.map((src, index) => (
-          <AnimatePresence key={index}>
-            {index === currentIndex && (
-              <motion.div
-                key={src}
-                initial={{ opacity: 0, y: 50, rotate: 75 }}
-                animate={{ opacity: 1, y: 0, rotate: 0 }}
-                exit={{ opacity: 0, y: -50, rotate: 110 }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-                className="absolute inset-0 w-full h-full rounded-xl shadow-lg"
-                style={{
-                  backgroundImage: `url(${src})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-            )}
-          </AnimatePresence>
-        ))}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={images[currentIndex]}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="absolute inset-0 w-full h-full rounded-xl shadow-lg"
+          >
+            <img
+              src={images[currentIndex]}
+              alt=""
+              loading="lazy"
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
