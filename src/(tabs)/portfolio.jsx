@@ -6,16 +6,16 @@ const base = import.meta.env.BASE_URL;
 
 const portfolioItems = [
   {
+    imageSrc: `${base}collections/Reconnected/reconnected1.jpg`,
+    eventName: "Reconnected MTL",
+    eventDate: "March 1st 2025",
+    collectionId: "Reconnectedmtl",
+  },
+  {
     imageSrc: `${base}collections/Gala/gala8.jpg`,
     eventName: "New Year, New Blessings",
     eventDate: "December 29 2024",
     collectionId: "Gala",
-  },
-  {
-    imageSrc: `${base}collections/NewBeginnings/beginnings2.jpg`,
-    eventName: "New Beginnings",
-    eventDate: "December 14 2024",
-    collectionId: "NewBeginnings",
   },
   {
     imageSrc: `${base}collections/SabbatJeunesse/chante4.jpg`,
@@ -24,10 +24,10 @@ const portfolioItems = [
     collectionId: "SabbatJeunesse",
   },
   {
-    imageSrc: `${base}collections/Reconnected/reconnected1.jpg`,
-    eventName: "Reconnected MTL",
-    eventDate: "March 1st 2025",
-    collectionId: "Reconnectedmtl",
+    imageSrc: `${base}collections/NewBeginnings/beginnings2.jpg`,
+    eventName: "New Beginnings",
+    eventDate: "December 14 2024",
+    collectionId: "NewBeginnings",
   },
   {
     imageSrc: `${base}collections/RenewalMinistry/renewal2.jpg`,

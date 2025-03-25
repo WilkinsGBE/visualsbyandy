@@ -26,6 +26,8 @@ const collectionsData = {
       withBase("collections/NewBeginnings/beginnings3.jpg"),
       withBase("collections/NewBeginnings/beginnings5.jpg"),
       withBase("collections/NewBeginnings/beginnings1.jpg"),
+      withBase("collections/NewBeginnings/beginnings6.jpg"),
+      withBase("collections/NewBeginnings/beginnings7.jpg"),
     ],
   },
   Gala: {
@@ -61,6 +63,12 @@ const collectionsData = {
       withBase("collections/SabbatJeunesse/chante1.jpg"),
       withBase("collections/SabbatJeunesse/chante2.jpg"),
       withBase("collections/SabbatJeunesse/chante4.jpg"),
+      withBase("collections/SabbatJeunesse/chante6.jpg"),
+      withBase("collections/SabbatJeunesse/chante5.jpg"),
+      withBase("collections/SabbatJeunesse/chante3.jpg"),
+      withBase("collections/SabbatJeunesse/chante7.jpg"),
+      withBase("collections/SabbatJeunesse/chante8.jpg"),
+      withBase("collections/SabbatJeunesse/chante9.jpg"),
     ],
   },
 };
