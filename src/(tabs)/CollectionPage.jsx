@@ -82,7 +82,7 @@ const CollectionPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen w-full bg-black p-6 text-center">
+    <div className="min-h-screen w-full bg-black px-6 py-20 text-center">
       <h1 className="text-4xl text-white font-bold mb-10">
         {collection.title}
       </h1>

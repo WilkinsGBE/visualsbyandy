@@ -14,9 +14,9 @@ const Footer = () => {
       {/* Copyright & Creator Info */}
       <div className="text-center mt-4 space-y-2">
         <p>Copyright © {new Date().getFullYear()}. All rights reserved.</p>
-        <p>
+        <a href="mailto:wilkins4business@gmail.com">
           Made by <span className="text-[#A0522D] font-semibold">Wilkins</span>
-        </p>
+        </a>
         <a
           href="mailto:wilkins4business@gmail.com"
           className="text-2xl hover:text-[#A0522D] transition cursor-pointer"

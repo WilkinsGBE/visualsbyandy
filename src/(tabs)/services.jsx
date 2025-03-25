@@ -40,7 +40,7 @@ const serviceGroups = [
 
 const Services = () => {
   return (
-    <div className="bg-gradient-to-br from-black via-black to-[#A0522D] text-white">
+    <div className="bg-gradient-to-br from-black via-black to-[#A0522D] text-white py-12">
       {serviceGroups.map((group, idx) => (
         <section
           key={idx}
