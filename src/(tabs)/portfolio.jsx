@@ -30,7 +30,7 @@ const portfolioItems = [
     collectionId: "Reconnectedmtl",
   },
   {
-    imageSrc: `${base}collections/RenewalMinistry/renewal6.jpg`,
+    imageSrc: `${base}collections/RenewalMinistry/renewal2.jpg`,
     eventName: "Salem Youth Service",
     eventDate: "October 5 2024",
     collectionId: "RenewalMinistry",

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/Custom.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars, faXmark } from "@fortawesome/free-brands-svg-icons";
+import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,16 +18,48 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link to="/homepage" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Home</Link>
-          <Link to="/about" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">About</Link>
-          <Link to="/portfolio" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Portfolio</Link>
-          <Link to="/services" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Services</Link>
-          <Link to="/contact" className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full">Contact</Link>
+          <Link
+            to="/homepage"
+            className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full"
+          >
+            About
+          </Link>
+          <Link
+            to="/portfolio"
+            className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full"
+          >
+            Portfolio
+          </Link>
+          <Link
+            to="/services"
+            className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full"
+          >
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            className="relative text-white text-lg transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-[#A0522D] before:transition-all before:duration-300 hover:before:w-full"
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Mobile Menu Button (📸 Icon) */}
-        <button className="md:hidden text-3xl focus:outline-none" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? "❌" : "📸"}
+        <button
+          className="md:hidden text-3xl focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <FontAwesomeIcon icon={faXmark} />
+          ) : (
+            <FontAwesomeIcon icon={faBars} />
+          )}
         </button>
       </div>
 
@@ -34,17 +69,50 @@ const Header = () => {
           menuOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 md:hidden`}
       >
-        {/* Close Button (❌) */}
-        <button className="absolute top-5 right-5 text-white text-3xl" onClick={() => setMenuOpen(false)}>
-          ❌
+        {/* Close Button */}
+        <button
+          className="absolute top-5 right-5 text-white text-3xl"
+          onClick={() => setMenuOpen(false)}
+        >
+          <FontAwesomeIcon icon={faXmark} />
         </button>
 
         <nav className="flex flex-col items-center justify-center h-full space-y-6">
-          <Link to="/homepage" className="text-white text-lg hover:text-[#A0522D] transition duration-300" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/about" className="text-white text-lg hover:text-[#A0522D] transition duration-300" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link to="/portfolio" className="text-white text-lg hover:text-[#A0522D] transition duration-300" onClick={() => setMenuOpen(false)}>Portfolio</Link>
-          <Link to="/services" className="text-white text-lg hover:text-[#A0522D] transition duration-300" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link to="/contact" className="text-white text-lg hover:text-[#A0522D] transition duration-300" onClick={() => setMenuOpen(false)}>Contact</Link>
+          <Link
+            to="/homepage"
+            className="text-white text-lg hover:text-[#A0522D] transition duration-300"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="text-white text-lg hover:text-[#A0522D] transition duration-300"
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/portfolio"
+            className="text-white text-lg hover:text-[#A0522D] transition duration-300"
+            onClick={() => setMenuOpen(false)}
+          >
+            Portfolio
+          </Link>
+          <Link
+            to="/services"
+            className="text-white text-lg hover:text-[#A0522D] transition duration-300"
+            onClick={() => setMenuOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            to="/contact"
+            className="text-white text-lg hover:text-[#A0522D] transition duration-300"
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </Link>
         </nav>
       </div>
     </header>

@@ -60,7 +60,6 @@ const collectionsData = {
     images: [
       withBase("collections/SabbatJeunesse/chante1.jpg"),
       withBase("collections/SabbatJeunesse/chante2.jpg"),
-      withBase("collections/SabbatJeunesse/chante3.jpg"),
       withBase("collections/SabbatJeunesse/chante4.jpg"),
     ],
   },
