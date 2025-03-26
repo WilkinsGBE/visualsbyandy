@@ -5,7 +5,8 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import './i18n';
+import "./i18n";
+import ScrollToTop from "../components/ScrollToTop";
 import Header from "./Header";
 import HomePage from "./(tabs)/homepage";
 import About from "./(tabs)/about";
@@ -21,9 +22,13 @@ const App = () => {
       {/* Background Glow Effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.08)_0%,rgba(0,0,0,1)_90%)]"></div>
 
-      {/* Ensuring Content is Above the Background */}
-      <div className="relative z-10">
+      {/* Main Content Wrapper with Scroll */}
+      <div
+        id="scroll-wrapper"
+        className="relative z-10 overflow-y-auto max-h-screen"
+      >
         <Router>
+          <ScrollToTop />
           <Header />
           <Routes>
             <Route path="/" element={<Navigate to="/homepage" />} />
