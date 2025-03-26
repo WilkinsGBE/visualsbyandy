@@ -10,7 +10,7 @@ const Home = () => {
     i18n.changeLanguage(lng);
   };
   return (
-    <div className="relative min-h-screen w-full bg-gradient-to-br from-black via-black to-[#A0522D] flex flex-col items-center text-center px-6 py-4 pt-16 md:pt-0">
+    <div className="relative min-h-screen w-full bg-gradient-to-br from-black via-black to-[#A0522D] flex flex-col items-center text-center px-6 py-4 pt-16 md:pt-10">
       {/* Main Content */}
       <h1 className="text-4xl font-bold text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] mb-2 mt-8 sm:mt-12 md:mt-20">
         {t("homepage.title")}
