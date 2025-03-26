@@ -16,6 +16,7 @@ import Contact from "./(tabs)/contact";
 import Footer from "./Footer";
 import CollectionPage from "./(tabs)/CollectionPage";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
   return (
@@ -45,7 +46,9 @@ const App = () => {
             <Route path="*" element={<h1>404 Not Found</h1>} />
           </Routes>
           <Footer />
+          {/* ✅ Vercel analytics components */}
           <Analytics />
+          <SpeedInsights />
         </Router>
       </div>
     </div>
