@@ -7,11 +7,31 @@ const base = import.meta.env.BASE_URL;
 
 const portfolioItems = [
   {
+    imageSrc: `${base}collections/Studio/Studio22.JPG`,
+    eventNameKey: "portfolio.bridge",
+    eventDateKey: "portfolio.bridgeDate",
+    collectionId: "BridgeOfHope",
+  },
+  {
+    imageSrc: `${base}collections/SandraJean/SandraJean7.jpg`,
+    eventNameKey: "portfolio.sandra",
+    eventDateKey: "portfolio.sandraDate",
+    collectionId: "SandraJean",
+  },
+  {
+    imageSrc: `${base}collections/Bridge/Bridge7.jpg`,
+    eventNameKey: "portfolio.bridge",
+    eventDateKey: "portfolio.bridgeDate",
+    collectionId: "BridgeOfHope",
+  },
+
+
+  {
     imageSrc: `${base}collections/Reconnected/reconnected1.jpg`,
     eventNameKey: "portfolio.reconnected",
     eventDateKey: "portfolio.reconnectedDate",
     collectionId: "Reconnectedmtl",
-  },
+},
   {
     imageSrc: `${base}collections/Gala/gala8.jpg`,
     eventNameKey: "portfolio.nyblessings",
