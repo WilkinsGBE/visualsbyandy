@@ -7,6 +7,24 @@ const base = import.meta.env.BASE_URL;
 
 const portfolioItems = [
   {
+    imageSrc: `${base}collections/Studio/Studio22.JPG`,
+    eventNameKey: "portfolio.studio",
+    eventDateKey: "portfolio.studioDate",
+    collectionId: "Studio",
+  },
+  {
+    imageSrc: `${base}collections/SandraJean/SandraJean7.jpg`,
+    eventNameKey: "portfolio.sandra",
+    eventDateKey: "portfolio.sandraDate",
+    collectionId: "SandraJean",
+  },
+  {
+    imageSrc: `${base}collections/BridgeOfHope/Bridge7.jpg`,
+    eventNameKey: "portfolio.bridge",
+    eventDateKey: "portfolio.bridgeDate",
+    collectionId: "BridgeOfHope",
+  },
+  {
     imageSrc: `${base}collections/Reconnected/reconnected1.jpg`,
     eventNameKey: "portfolio.reconnected",
     eventDateKey: "portfolio.reconnectedDate",
@@ -44,7 +62,9 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-black via-black to-[#A0522D] px-6 py-12 flex flex-col justify-start items-center text-center">
       <section className="pt-16 pb-10 text-center">
-        <h1 className="text-4xl text-white font-bold mb-5">{t("portfolio.title")}</h1>
+        <h1 className="text-4xl text-white font-bold mb-5">
+          {t("portfolio.title")}
+        </h1>
 
         <p className="text-m font-bold text-[#A0522D] mb-6 text-center max-w-2xl mx-auto">
           <Typewriter

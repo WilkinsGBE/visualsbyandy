@@ -36,7 +36,13 @@
     "newbeginnings": "New Beginnings",
     "newbeginningsDate": "December 14 2024",
     "salemyouth": "Salem Youth Service",
-    "salemyouthDate": "October 5 2024"
+    "salemyouthDate": "October 5 2024",
+    "bridge": "Bridge of Hope",
+    "bridgeDate": "March 29th 2025",
+    "sandra": "Let everything that breathes praise the Lord",
+    "sandraDate": "April 26th 2025",
+    "studio": "Studio Photoshoot",
+    "studioDate": "May 4th 2025"
   },
   "services": {
     "packageTitle": "VisualsByAndy Photography Packages",
@@ -122,7 +128,10 @@
     "newBeginnings": "New Beginnings",
     "nyblessings": "New Year, New Blessings",
     "renewal": "Renewal Ministry Youth Service",
-    "sabbat": "Worship service - LaFontaine & Saint-Leonard",
+    "sabbat": "Sabbat Jeunesse",
+    "studio": "Studio Photoshoot",
+    "sandra": "Let everything that breathes praise the Lord",
+    "bridge": "Bridge of Hope",
     "notFound": "Collection not found",
     "clickToView": "Click any photo to view full screen",
     "back": "Back to Portfolio"
