@@ -47,7 +47,6 @@ const CollectionPage = () => {
         withBase("collections/Studio/Studio29.JPG"),
         withBase("collections/Studio/Studio30.JPG"),
         withBase("collections/Studio/Studio31.JPG"),
-        withBase("collections/Studio/Studio32.JPG"),
         withBase("collections/Studio/Studio33.JPG"),
       ],
     },
